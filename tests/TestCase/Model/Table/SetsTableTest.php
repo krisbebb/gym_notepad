@@ -24,7 +24,8 @@ class SetsTableTest extends TestCase
      */
     public $fixtures = [
         'app.Sets',
-        'app.Exercises'
+        'app.Exercises',
+        'app.Workouts'
     ];
 
     /**

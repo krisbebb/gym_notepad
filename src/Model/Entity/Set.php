@@ -10,8 +10,10 @@ use Cake\ORM\Entity;
  * @property int $exercise_id
  * @property int $reps
  * @property int $weight
+ * @property int $workout_id
  *
  * @property \App\Model\Entity\Exercise $exercise
+ * @property \App\Model\Entity\Workout $workout
  */
 class Set extends Entity
 {
@@ -28,6 +30,8 @@ class Set extends Entity
         'exercise_id' => true,
         'reps' => true,
         'weight' => true,
-        'exercise' => true
+        'workout_id' => true,
+        'exercise' => true,
+        'workout' => true
     ];
 }

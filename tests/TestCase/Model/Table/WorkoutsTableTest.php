@@ -23,7 +23,8 @@ class WorkoutsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.Workouts'
+        'app.Workouts',
+        'app.Sets'
     ];
 
     /**

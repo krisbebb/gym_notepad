@@ -34,7 +34,7 @@ class WorkoutsController extends AppController
     public function view($id = null)
     {
         $workout = $this->Workouts->get($id, [
-            'contain' => []
+            'contain' => ['Sets']
         ]);
 
         $this->set('workout', $workout);

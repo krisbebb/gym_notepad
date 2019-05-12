@@ -10,6 +10,7 @@ use Cake\Validation\Validator;
  * Sets Model
  *
  * @property \App\Model\Table\ExercisesTable|\Cake\ORM\Association\BelongsTo $Exercises
+ * @property \App\Model\Table\WorkoutsTable|\Cake\ORM\Association\BelongsTo $Workouts
  *
  * @method \App\Model\Entity\Set get($primaryKey, $options = [])
  * @method \App\Model\Entity\Set newEntity($data = null, array $options = [])
@@ -38,6 +39,10 @@ class SetsTable extends Table
 
         $this->belongsTo('Exercises', [
             'foreignKey' => 'exercise_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('Workouts', [
+            'foreignKey' => 'workout_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -77,6 +82,7 @@ class SetsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['exercise_id'], 'Exercises'));
+        $rules->add($rules->existsIn(['workout_id'], 'Workouts'));
 
         return $rules;
     }

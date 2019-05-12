@@ -36,6 +36,7 @@
                 <th scope="col"><?= __('Exercise Id') ?></th>
                 <th scope="col"><?= __('Reps') ?></th>
                 <th scope="col"><?= __('Weight') ?></th>
+                <th scope="col"><?= __('Workout') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($exercise->sets as $sets): ?>
@@ -44,6 +45,7 @@
                 <td><?= h($sets->exercise_id) ?></td>
                 <td><?= h($sets->reps) ?></td>
                 <td><?= h($sets->weight) ?></td>
+                <td><?= h($sets->workout) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Sets', 'action' => 'view', $sets->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Sets', 'action' => 'edit', $sets->id]) ?>

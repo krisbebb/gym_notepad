@@ -10,6 +10,8 @@
         <li><?= $this->Html->link(__('New Set'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Exercises'), ['controller' => 'Exercises', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Exercise'), ['controller' => 'Exercises', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Workouts'), ['controller' => 'Workouts', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Workout'), ['controller' => 'Workouts', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="sets index large-9 medium-8 columns content">
@@ -21,6 +23,7 @@
                 <th scope="col"><?= $this->Paginator->sort('exercise_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('reps') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('weight') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('workout_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -31,6 +34,7 @@
                 <td><?= $set->has('exercise') ? $this->Html->link($set->exercise->name, ['controller' => 'Exercises', 'action' => 'view', $set->exercise->id]) : '' ?></td>
                 <td><?= $this->Number->format($set->reps) ?></td>
                 <td><?= $this->Number->format($set->weight) ?></td>
+                <td><?= $set->has('workout') ? $this->Html->link($set->workout->name, ['controller' => 'Workouts', 'action' => 'view', $set->workout->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $set->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $set->id]) ?>

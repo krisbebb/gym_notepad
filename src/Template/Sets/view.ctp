@@ -13,6 +13,8 @@
         <li><?= $this->Html->link(__('New Set'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Exercises'), ['controller' => 'Exercises', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Exercise'), ['controller' => 'Exercises', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Workouts'), ['controller' => 'Workouts', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Workout'), ['controller' => 'Workouts', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="sets view large-9 medium-8 columns content">
@@ -21,6 +23,10 @@
         <tr>
             <th scope="row"><?= __('Exercise') ?></th>
             <td><?= $set->has('exercise') ? $this->Html->link($set->exercise->name, ['controller' => 'Exercises', 'action' => 'view', $set->exercise->id]) : '' ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Workout') ?></th>
+            <td><?= $set->has('workout') ? $this->Html->link($set->workout->name, ['controller' => 'Workouts', 'action' => 'view', $set->workout->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

@@ -20,7 +20,7 @@ class SetsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Exercises']
+            'contain' => ['Exercises', 'Workouts']
         ];
         $sets = $this->paginate($this->Sets);
 
@@ -37,7 +37,7 @@ class SetsController extends AppController
     public function view($id = null)
     {
         $set = $this->Sets->get($id, [
-            'contain' => ['Exercises']
+            'contain' => ['Exercises', 'Workouts']
         ]);
 
         $this->set('set', $set);
@@ -61,7 +61,8 @@ class SetsController extends AppController
             $this->Flash->error(__('The set could not be saved. Please, try again.'));
         }
         $exercises = $this->Sets->Exercises->find('list', ['limit' => 200]);
-        $this->set(compact('set', 'exercises'));
+        $workouts = $this->Sets->Workouts->find('list', ['limit' => 200]);
+        $this->set(compact('set', 'exercises', 'workouts'));
     }
 
     /**
@@ -86,7 +87,8 @@ class SetsController extends AppController
             $this->Flash->error(__('The set could not be saved. Please, try again.'));
         }
         $exercises = $this->Sets->Exercises->find('list', ['limit' => 200]);
-        $this->set(compact('set', 'exercises'));
+        $workouts = $this->Sets->Workouts->find('list', ['limit' => 200]);
+        $this->set(compact('set', 'exercises', 'workouts'));
     }
 
     /**

@@ -8,6 +8,8 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $name
+ *
+ * @property \App\Model\Entity\Set[] $sets
  */
 class Workout extends Entity
 {
@@ -21,6 +23,7 @@ class Workout extends Entity
      * @var array
      */
     protected $_accessible = [
-        'name' => true
+        'name' => true,
+        'sets' => true
     ];
 }

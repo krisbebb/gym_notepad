@@ -9,6 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Workouts Model
  *
+ * @property \App\Model\Table\SetsTable|\Cake\ORM\Association\HasMany $Sets
+ *
  * @method \App\Model\Entity\Workout get($primaryKey, $options = [])
  * @method \App\Model\Entity\Workout newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Workout[] newEntities(array $data, array $options = [])
@@ -33,6 +35,10 @@ class WorkoutsTable extends Table
         $this->setTable('workouts');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
+
+        $this->hasMany('Sets', [
+            'foreignKey' => 'workout_id'
+        ]);
     }
 
     /**
