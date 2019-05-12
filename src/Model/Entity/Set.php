@@ -4,12 +4,16 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Workout Entity
+ * Set Entity
  *
  * @property int $id
- * @property string $name
+ * @property int $exercise_id
+ * @property int $reps
+ * @property int $weight
+ *
+ * @property \App\Model\Entity\Exercise $exercise
  */
-class Workout extends Entity
+class Set extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -21,6 +25,9 @@ class Workout extends Entity
      * @var array
      */
     protected $_accessible = [
-        'name' => true
+        'exercise_id' => true,
+        'reps' => true,
+        'weight' => true,
+        'exercise' => true
     ];
 }

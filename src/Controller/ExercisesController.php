@@ -34,7 +34,7 @@ class ExercisesController extends AppController
     public function view($id = null)
     {
         $exercise = $this->Exercises->get($id, [
-            'contain' => ['Workouts']
+            'contain' => ['Sets']
         ]);
 
         $this->set('exercise', $exercise);
@@ -57,8 +57,7 @@ class ExercisesController extends AppController
             }
             $this->Flash->error(__('The exercise could not be saved. Please, try again.'));
         }
-        $workouts = $this->Exercises->Workouts->find('list', ['limit' => 200]);
-        $this->set(compact('exercise', 'workouts'));
+        $this->set(compact('exercise'));
     }
 
     /**
@@ -71,7 +70,7 @@ class ExercisesController extends AppController
     public function edit($id = null)
     {
         $exercise = $this->Exercises->get($id, [
-            'contain' => ['Workouts']
+            'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $exercise = $this->Exercises->patchEntity($exercise, $this->request->getData());
@@ -82,8 +81,7 @@ class ExercisesController extends AppController
             }
             $this->Flash->error(__('The exercise could not be saved. Please, try again.'));
         }
-        $workouts = $this->Exercises->Workouts->find('list', ['limit' => 200]);
-        $this->set(compact('exercise', 'workouts'));
+        $this->set(compact('exercise'));
     }
 
     /**

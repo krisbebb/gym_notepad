@@ -1,21 +1,21 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\WorkoutsTable;
+use App\Model\Table\SetsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\WorkoutsTable Test Case
+ * App\Model\Table\SetsTable Test Case
  */
-class WorkoutsTableTest extends TestCase
+class SetsTableTest extends TestCase
 {
     /**
      * Test subject
      *
-     * @var \App\Model\Table\WorkoutsTable
+     * @var \App\Model\Table\SetsTable
      */
-    public $Workouts;
+    public $Sets;
 
     /**
      * Fixtures
@@ -23,7 +23,8 @@ class WorkoutsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.Workouts'
+        'app.Sets',
+        'app.Exercises'
     ];
 
     /**
@@ -34,8 +35,8 @@ class WorkoutsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Workouts') ? [] : ['className' => WorkoutsTable::class];
-        $this->Workouts = TableRegistry::getTableLocator()->get('Workouts', $config);
+        $config = TableRegistry::getTableLocator()->exists('Sets') ? [] : ['className' => SetsTable::class];
+        $this->Sets = TableRegistry::getTableLocator()->get('Sets', $config);
     }
 
     /**
@@ -45,7 +46,7 @@ class WorkoutsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Workouts);
+        unset($this->Sets);
 
         parent::tearDown();
     }
@@ -66,6 +67,16 @@ class WorkoutsTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     */
+    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

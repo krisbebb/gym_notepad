@@ -11,8 +11,8 @@
         <li><?= $this->Form->postLink(__('Delete Exercise'), ['action' => 'delete', $exercise->id], ['confirm' => __('Are you sure you want to delete # {0}?', $exercise->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Exercises'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Exercise'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Workouts'), ['controller' => 'Workouts', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Workout'), ['controller' => 'Workouts', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Sets'), ['controller' => 'Sets', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Set'), ['controller' => 'Sets', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="exercises view large-9 medium-8 columns content">
@@ -28,22 +28,26 @@
         </tr>
     </table>
     <div class="related">
-        <h4><?= __('Related Workouts') ?></h4>
-        <?php if (!empty($exercise->workouts)): ?>
+        <h4><?= __('Related Sets') ?></h4>
+        <?php if (!empty($exercise->sets)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Name') ?></th>
+                <th scope="col"><?= __('Exercise Id') ?></th>
+                <th scope="col"><?= __('Reps') ?></th>
+                <th scope="col"><?= __('Weight') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
-            <?php foreach ($exercise->workouts as $workouts): ?>
+            <?php foreach ($exercise->sets as $sets): ?>
             <tr>
-                <td><?= h($workouts->id) ?></td>
-                <td><?= h($workouts->name) ?></td>
+                <td><?= h($sets->id) ?></td>
+                <td><?= h($sets->exercise_id) ?></td>
+                <td><?= h($sets->reps) ?></td>
+                <td><?= h($sets->weight) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Workouts', 'action' => 'view', $workouts->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Workouts', 'action' => 'edit', $workouts->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Workouts', 'action' => 'delete', $workouts->id], ['confirm' => __('Are you sure you want to delete # {0}?', $workouts->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'Sets', 'action' => 'view', $sets->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Sets', 'action' => 'edit', $sets->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Sets', 'action' => 'delete', $sets->id], ['confirm' => __('Are you sure you want to delete # {0}?', $sets->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

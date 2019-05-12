@@ -8,8 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Exercises'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Workouts'), ['controller' => 'Workouts', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Workout'), ['controller' => 'Workouts', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Sets'), ['controller' => 'Sets', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Set'), ['controller' => 'Sets', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="exercises form large-9 medium-8 columns content">
@@ -18,7 +18,6 @@
         <legend><?= __('Add Exercise') ?></legend>
         <?php
             echo $this->Form->control('name');
-            echo $this->Form->control('workouts._ids', ['options' => $workouts]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

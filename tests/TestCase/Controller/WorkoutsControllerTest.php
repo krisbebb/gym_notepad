@@ -18,9 +18,7 @@ class WorkoutsControllerTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.Workouts',
-        'app.Exercises',
-        'app.ExercisesWorkouts'
+        'app.Workouts'
     ];
 
     /**
