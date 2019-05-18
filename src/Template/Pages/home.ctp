@@ -1,1 +1,1 @@
-<h1>Add Article</h1>
+<h1>Gym Notepad</h1>
