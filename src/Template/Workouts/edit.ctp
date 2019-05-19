@@ -14,8 +14,8 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Workouts'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Exercises'), ['controller' => 'Exercises', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Exercise'), ['controller' => 'Exercises', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Sets'), ['controller' => 'Sets', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Set'), ['controller' => 'Sets', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="workouts form large-9 medium-8 columns content">
@@ -24,7 +24,6 @@
         <legend><?= __('Edit Workout') ?></legend>
         <?php
             echo $this->Form->control('name');
-            echo $this->Form->control('exercises._ids', ['options' => $exercises]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

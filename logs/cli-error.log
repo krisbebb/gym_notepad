@@ -1,0 +1,110 @@
+2019-05-12 08:30:15 Error: [RuntimeException] Unknown command `cake serer`. Run `cake --help` to get the list of valid commands. in /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php on line 346
+Stack Trace:
+#0 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'serer')
+#1 /Users/kris/gym_notepad/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2019-05-12 10:02:02 Error: [RuntimeException] Unknown command `cake ball`. Run `cake --help` to get the list of valid commands. in /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php on line 346
+Stack Trace:
+#0 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'ball')
+#1 /Users/kris/gym_notepad/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
+2019-05-12 11:28:42 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 's272406_gym_db.workoiuts' doesn't exist in /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 131
+Stack Trace:
+#0 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'workoiuts', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('workoiuts', Array)
+#2 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/ORM/Table.php(555): Cake\Database\Schema\CachedCollection->describe('workoiuts')
+#3 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/ORM/Table.php(680): Cake\ORM\Table->getSchema()
+#4 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'workoiuts', 'Workoiuts')
+#7 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Workoiuts')
+#8 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Workoiuts')
+#9 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Workoiuts', 0)
+#10 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#11 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/Shell.php(518): Bake\Shell\BakeShell->all('workoiuts')
+#12 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 /Users/kris/gym_notepad/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 's272406_gym_db.workoiuts' doesn't exist in /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+#0 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(129): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'workoiuts', Array, Object(Cake\Database\Schema\TableSchema))
+#9 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('workoiuts', Array)
+#10 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/ORM/Table.php(555): Cake\Database\Schema\CachedCollection->describe('workoiuts')
+#11 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/ORM/Table.php(680): Cake\ORM\Table->getSchema()
+#12 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'workoiuts', 'Workoiuts')
+#15 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Workoiuts')
+#16 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Workoiuts')
+#17 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Workoiuts', 0)
+#18 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#19 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/Shell.php(518): Bake\Shell\BakeShell->all('workoiuts')
+#20 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#21 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 /Users/kris/gym_notepad/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+
+2019-05-12 11:57:34 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 's272406_gym_db.sessions' doesn't exist in /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 131
+Stack Trace:
+#0 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'sessions', Array, Object(Cake\Database\Schema\TableSchema))
+#1 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('sessions', Array)
+#2 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/ORM/Table.php(555): Cake\Database\Schema\CachedCollection->describe('sessions')
+#3 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/ORM/Table.php(680): Cake\ORM\Table->getSchema()
+#4 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#5 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'sessions', 'Sessions')
+#7 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Sessions')
+#8 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Sessions')
+#9 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Sessions', 0)
+#10 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#11 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/Shell.php(518): Bake\Shell\BakeShell->all('sessions')
+#12 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 /Users/kris/gym_notepad/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 's272406_gym_db.sessions' doesn't exist in /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+#0 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Connection.php(350): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#3 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Connection.php(353): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#4 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Connection.php(302): Cake\Database\Connection->query('SHOW FULL COLUM...')
+#5 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#6 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Connection.php(306): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#7 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(129): Cake\Database\Connection->execute('SHOW FULL COLUM...', Array)
+#8 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'sessions', Array, Object(Cake\Database\Schema\TableSchema))
+#9 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('sessions', Array)
+#10 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/ORM/Table.php(555): Cake\Database\Schema\CachedCollection->describe('sessions')
+#11 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/ORM/Table.php(680): Cake\ORM\Table->getSchema()
+#12 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(221): Cake\ORM\Table->getPrimaryKey()
+#13 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#14 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'sessions', 'Sessions')
+#15 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Sessions')
+#16 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Sessions')
+#17 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Sessions', 0)
+#18 /Users/kris/gym_notepad/vendor/cakephp/bake/src/Shell/BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#19 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/Shell.php(518): Bake\Shell\BakeShell->all('sessions')
+#20 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#21 /Users/kris/gym_notepad/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#22 /Users/kris/gym_notepad/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#23 {main}
+
+

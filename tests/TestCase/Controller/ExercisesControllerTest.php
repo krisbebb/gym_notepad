@@ -19,8 +19,7 @@ class ExercisesControllerTest extends TestCase
      */
     public $fixtures = [
         'app.Exercises',
-        'app.Workouts',
-        'app.ExercisesWorkouts'
+        'app.Sets'
     ];
 
     /**

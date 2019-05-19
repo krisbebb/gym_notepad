@@ -29,6 +29,7 @@ $cakeDescription = 'Gym Notepad';
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('style.css') ?>
 
+
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -47,6 +48,8 @@ $cakeDescription = 'Gym Notepad';
             </ul>
         </div>
     </nav>
+
+
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>

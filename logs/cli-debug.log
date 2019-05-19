@@ -1,0 +1,100 @@
+2019-05-12 11:38:28 Notice: Notice (8): Undefined index: Sets in [/Users/kris/gym_notepad/vendor/cakephp/bake/src/View/Helper/DocBlockHelper.php, line 250]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 159
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT/vendor/cakephp/bake/src/View/Helper/DocBlockHelper.php, line 250
+Twig\Template::getAttribute() - ROOT/vendor/twig/twig/src/Template.php, line 692
+__TwigTemplate_fb78695fb6b2663c5f3a8faa6936ce42131938bab7e2e70f5f95aeed4f221402::doDisplay() - ROOT/tmp/cache/twigView/6f/6f6629ecae9bb9e00e01442ade278dfab5e22813fdbfb8617e8813a86cd17122.php, line 30
+Twig\Template::displayWithErrorHandling() - ROOT/vendor/twig/twig/src/Template.php, line 443
+Twig\Template::display() - ROOT/vendor/twig/twig/src/Template.php, line 414
+Twig\Template::render() - ROOT/vendor/twig/twig/src/Template.php, line 422
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT/vendor/wyrihaximus/twig-view/src/View/TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT/vendor/cakephp/bake/src/View/BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT/vendor/cakephp/bake/src/Shell/Task/BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 1016
+Bake\Shell\Task\ModelTask::bake() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 115
+Bake\Shell\Task\ModelTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 279
+Cake\Collection\Collection::each() - CORE/src/Collection/CollectionTrait.php, line 51
+Bake\Shell\BakeShell::all() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 280
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 518
+Cake\Console\CommandRunner::runShell() - CORE/src/Console/CommandRunner.php, line 384
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 162
+[main] - ROOT/bin/cake.php, line 12
+
+
+
+2019-05-12 11:38:44 Notice: Notice (8): Undefined index: Exercises in [/Users/kris/gym_notepad/vendor/cakephp/bake/src/View/Helper/DocBlockHelper.php, line 250]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 159
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT/vendor/cakephp/bake/src/View/Helper/DocBlockHelper.php, line 250
+Twig\Template::getAttribute() - ROOT/vendor/twig/twig/src/Template.php, line 692
+__TwigTemplate_fb78695fb6b2663c5f3a8faa6936ce42131938bab7e2e70f5f95aeed4f221402::doDisplay() - ROOT/tmp/cache/twigView/6f/6f6629ecae9bb9e00e01442ade278dfab5e22813fdbfb8617e8813a86cd17122.php, line 30
+Twig\Template::displayWithErrorHandling() - ROOT/vendor/twig/twig/src/Template.php, line 443
+Twig\Template::display() - ROOT/vendor/twig/twig/src/Template.php, line 414
+Twig\Template::render() - ROOT/vendor/twig/twig/src/Template.php, line 422
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT/vendor/wyrihaximus/twig-view/src/View/TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT/vendor/cakephp/bake/src/View/BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT/vendor/cakephp/bake/src/Shell/Task/BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 1016
+Bake\Shell\Task\ModelTask::bake() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 115
+Bake\Shell\Task\ModelTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 279
+Cake\Collection\Collection::each() - CORE/src/Collection/CollectionTrait.php, line 51
+Bake\Shell\BakeShell::all() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 280
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 518
+Cake\Console\CommandRunner::runShell() - CORE/src/Console/CommandRunner.php, line 384
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 162
+[main] - ROOT/bin/cake.php, line 12
+
+
+
+2019-05-12 13:21:15 Notice: Notice (8): Undefined index: Workouts in [/Users/kris/gym_notepad/vendor/cakephp/bake/src/View/Helper/DocBlockHelper.php, line 250]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 159
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT/vendor/cakephp/bake/src/View/Helper/DocBlockHelper.php, line 250
+Twig\Template::getAttribute() - ROOT/vendor/twig/twig/src/Template.php, line 692
+__TwigTemplate_fb78695fb6b2663c5f3a8faa6936ce42131938bab7e2e70f5f95aeed4f221402::doDisplay() - ROOT/tmp/cache/twigView/6f/6f6629ecae9bb9e00e01442ade278dfab5e22813fdbfb8617e8813a86cd17122.php, line 30
+Twig\Template::displayWithErrorHandling() - ROOT/vendor/twig/twig/src/Template.php, line 443
+Twig\Template::display() - ROOT/vendor/twig/twig/src/Template.php, line 414
+Twig\Template::render() - ROOT/vendor/twig/twig/src/Template.php, line 422
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT/vendor/wyrihaximus/twig-view/src/View/TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT/vendor/cakephp/bake/src/View/BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT/vendor/cakephp/bake/src/Shell/Task/BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 1016
+Bake\Shell\Task\ModelTask::bake() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 115
+Bake\Shell\Task\ModelTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 279
+Cake\Collection\Collection::each() - CORE/src/Collection/CollectionTrait.php, line 51
+Bake\Shell\BakeShell::all() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 280
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 518
+Cake\Console\CommandRunner::runShell() - CORE/src/Console/CommandRunner.php, line 384
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 162
+[main] - ROOT/bin/cake.php, line 12
+
+
+
+2019-05-12 13:21:19 Notice: Notice (8): Undefined index: Sets in [/Users/kris/gym_notepad/vendor/cakephp/bake/src/View/Helper/DocBlockHelper.php, line 250]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 159
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT/vendor/cakephp/bake/src/View/Helper/DocBlockHelper.php, line 250
+Twig\Template::getAttribute() - ROOT/vendor/twig/twig/src/Template.php, line 692
+__TwigTemplate_fb78695fb6b2663c5f3a8faa6936ce42131938bab7e2e70f5f95aeed4f221402::doDisplay() - ROOT/tmp/cache/twigView/6f/6f6629ecae9bb9e00e01442ade278dfab5e22813fdbfb8617e8813a86cd17122.php, line 30
+Twig\Template::displayWithErrorHandling() - ROOT/vendor/twig/twig/src/Template.php, line 443
+Twig\Template::display() - ROOT/vendor/twig/twig/src/Template.php, line 414
+Twig\Template::render() - ROOT/vendor/twig/twig/src/Template.php, line 422
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT/vendor/wyrihaximus/twig-view/src/View/TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT/vendor/cakephp/bake/src/View/BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT/vendor/cakephp/bake/src/Shell/Task/BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 1016
+Bake\Shell\Task\ModelTask::bake() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 115
+Bake\Shell\Task\ModelTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 279
+Cake\Collection\Collection::each() - CORE/src/Collection/CollectionTrait.php, line 51
+Bake\Shell\BakeShell::all() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 280
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 518
+Cake\Console\CommandRunner::runShell() - CORE/src/Console/CommandRunner.php, line 384
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 162
+[main] - ROOT/bin/cake.php, line 12
+
+
+

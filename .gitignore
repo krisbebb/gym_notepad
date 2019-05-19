@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 # CakePHP specific files #
 ##########################
 
 
 /logs/*
 /tmp/*
+=======
+>>>>>>> build_db
 
 
 # OS generated files #

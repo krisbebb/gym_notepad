@@ -9,7 +9,7 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property string $name
  *
- * @property \App\Model\Entity\Exercise[] $exercises
+ * @property \App\Model\Entity\Set[] $sets
  */
 class Workout extends Entity
 {
@@ -24,6 +24,6 @@ class Workout extends Entity
      */
     protected $_accessible = [
         'name' => true,
-        'exercises' => true
+        'sets' => true
     ];
 }
