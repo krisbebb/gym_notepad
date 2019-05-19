@@ -23,6 +23,7 @@ $cakeDescription = 'Gym Notepad';
     <title>
         <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
+
     </title>
     <?= $this->Html->meta('icon') ?>
 
@@ -33,6 +34,9 @@ $cakeDescription = 'Gym Notepad';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
@@ -52,7 +56,11 @@ $cakeDescription = 'Gym Notepad';
 
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
-        <?= $this->fetch('content') ?>
+
+<?= $this->fetch('content') ?>
+
+
+
     </div>
     <footer>
     </footer>
