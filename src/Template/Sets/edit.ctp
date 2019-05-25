@@ -29,7 +29,10 @@
             echo $this->Form->control('reps');
             echo $this->Form->control('weight');
             echo $this->Form->control('workout_id', ['options' => $workouts]);
-        ?>
+
+
+            echo $this->Form->control('date');
+      ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>

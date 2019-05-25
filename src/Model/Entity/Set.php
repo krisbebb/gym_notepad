@@ -11,6 +11,7 @@ use Cake\ORM\Entity;
  * @property int $reps
  * @property int $weight
  * @property int $workout_id
+ * @property \Cake\I18n\FrozenTime $date
  *
  * @property \App\Model\Entity\Exercise $exercise
  * @property \App\Model\Entity\Workout $workout
@@ -31,6 +32,7 @@ class Set extends Entity
         'reps' => true,
         'weight' => true,
         'workout_id' => true,
+        'date' => true,
         'exercise' => true,
         'workout' => true
     ];

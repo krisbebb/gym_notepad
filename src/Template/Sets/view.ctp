@@ -40,5 +40,9 @@
             <th scope="row"><?= __('Weight') ?></th>
             <td><?= $this->Number->format($set->weight) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('Date') ?></th>
+            <td><?= h($set->date) ?></td>
+        </tr>
     </table>
 </div>

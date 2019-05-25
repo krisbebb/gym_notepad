@@ -69,6 +69,10 @@ class SetsTable extends Table
             ->requirePresence('weight', 'create')
             ->allowEmptyString('weight', false);
 
+        $validator
+            ->dateTime('date')
+            ->allowEmptyDateTime('date', false);
+
         return $validator;
     }
 

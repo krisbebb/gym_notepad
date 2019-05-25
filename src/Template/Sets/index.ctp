@@ -24,6 +24,7 @@
                 <th scope="col"><?= $this->Paginator->sort('reps') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('weight') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('workout_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('date') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -35,6 +36,7 @@
                 <td><?= $this->Number->format($set->reps) ?></td>
                 <td><?= $this->Number->format($set->weight) ?></td>
                 <td><?= $set->has('workout') ? $this->Html->link($set->workout->name, ['controller' => 'Workouts', 'action' => 'view', $set->workout->id]) : '' ?></td>
+                <td><?= h($set->date) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $set->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $set->id]) ?>

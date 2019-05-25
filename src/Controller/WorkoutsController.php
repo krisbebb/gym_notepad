@@ -17,6 +17,8 @@ class WorkoutsController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
+
+
     public function index()
     {
         $workouts = $this->paginate($this->Workouts);
@@ -24,6 +26,17 @@ class WorkoutsController extends AppController
         $this->set(compact('workouts'));
     }
 
+    public function home()
+    {
+
+      $workouts = $this->paginate($this->Workouts);
+
+      $this->set(compact('workouts'));
+      $this->loadModel('Exercises');
+      $exercises = $this->Exercises->find('all');
+      $this->set('exercises', $exercises);
+
+    }
     /**
      * View method
      *
