@@ -5,7 +5,8 @@
  */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
+
+    <ul data-role="listview">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Workout'), ['action' => 'edit', $workout->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Workout'), ['action' => 'delete', $workout->id], ['confirm' => __('Are you sure you want to delete # {0}?', $workout->id)]) ?> </li>
@@ -18,6 +19,7 @@
 <div class="workouts view large-9 medium-8 columns content">
     <h3><?= h($workout->name) ?></h3>
     <table class="vertical-table">
+
         <tr>
             <th scope="row"><?= __('Name') ?></th>
             <td><?= h($workout->name) ?></td>
@@ -41,6 +43,7 @@
             </tr>
             <?php foreach ($workout->sets as $sets): ?>
             <tr>
+
                 <td><?= h($sets->id) ?></td>
                 <td><?= h($sets->exercise_id) ?></td>
                 <td><?= h($sets->reps) ?></td>
