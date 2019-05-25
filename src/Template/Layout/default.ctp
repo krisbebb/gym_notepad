@@ -56,7 +56,7 @@ $cakeDescription = 'Gym Notepad';
 
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
-
+<?=$this->element('sidenav'); ?>
 <?= $this->fetch('content') ?>
 
 
