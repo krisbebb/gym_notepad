@@ -25,5 +25,5 @@ class Workout extends Entity
     protected $_accessible = [
         'name' => true,
         'sets' => true
-    ];
+      ];
 }
