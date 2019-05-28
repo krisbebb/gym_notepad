@@ -38,6 +38,8 @@ class PagesController extends AppController
      * @throws \Cake\Http\Exception\NotFoundException When the view file could not
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
+
+
     public function display(...$path)
     {
         $count = count($path);
@@ -65,5 +67,24 @@ class PagesController extends AppController
             }
             throw new NotFoundException();
         }
+    }
+
+
+    public function index()
+    {
+
+
+      //
+      // $this->set(compact('workouts'));
+      $this->loadModel('Workouts');
+      $workouts = $this->Workouts->find('all');
+      $workouts = $this->paginate($this->Workouts);
+      $this->set('workouts', $workouts);
+
+      $this->loadModel('Exercises');
+      $exercises = $this->Exercises->find('all');
+      $exercises = $this->paginate($this->Exercises);
+      $this->set('exercises', $exercises);
+
     }
 }

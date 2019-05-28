@@ -4,7 +4,14 @@
  * @var \App\Model\Entity\Workout[]|\Cake\Collection\CollectionInterface $workouts
  */
 ?>
-
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+    <ul class="side-nav">
+        <li class="heading"><?= __('Actions') ?></li>
+        <li><?= $this->Html->link(__('New Workout'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Sets'), ['controller' => 'Sets', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Set'), ['controller' => 'Sets', 'action' => 'add']) ?></li>
+    </ul>
+</nav>
 <div class="workouts index large-9 medium-8 columns content">
     <h3><?= __('Workouts') ?></h3>
     <ul class="side-nav">
@@ -45,13 +52,6 @@
 
 <?= $this->element('exercises'); ?>
 
-    <nav class="large-3 medium-4 columns" id="actions-sidebar">
-        <ul class="side-nav">
-            <li class="heading"><?= __('Actions') ?></li>
-            <li><?= $this->Html->link(__('New Workout'), ['action' => 'add']) ?></li>
-            <li><?= $this->Html->link(__('List Sets'), ['controller' => 'Sets', 'action' => 'index']) ?></li>
-            <li><?= $this->Html->link(__('New Set'), ['controller' => 'Sets', 'action' => 'add']) ?></li>
-        </ul>
-    </nav>
+
 
 </div>

@@ -4,6 +4,8 @@
  * @var \App\Model\Entity\Workout[]|\Cake\Collection\CollectionInterface $workouts
  */
 ?>
+
+<?= $this->element('exercises'); ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -14,6 +16,9 @@
 </nav>
 <div class="workouts index large-9 medium-8 columns content">
     <h3><?= __('Workouts') ?></h3>
+    <ul class="side-nav">
+      <li><?= $this->Html->link(__('New Workout'), ['action' => 'add']) ?></li>
+    </ul>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -46,4 +51,9 @@
         </ul>
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
     </div>
+
+
+
+
+
 </div>
