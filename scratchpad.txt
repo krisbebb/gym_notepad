@@ -1,129 +1,14 @@
-1
-Router::connect('/', array('controller' => 'users', 'action' => 'signup'));
+workoutscontroller - add exercises
 
+public function home()
+    {
 
-SQL
+      $workouts = $this->paginate($this->Workouts);
 
---
--- Database: `s272406_gym_db`
---
+      $this->set(compact('workouts'));
+      
+      $this->loadModel('Exercises');
+      $exercises = $this->Exercises->find('all');
+      $this->set('exercises', $exercises);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `exercises`
---
-
-CREATE TABLE `exercises` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL
-) ;
-
---
--- Dumping data for table `exercises`
---
-
-INSERT INTO `exercises` (`id`, `name`) VALUES
-(1, 'Pushups'),
-(2, 'situps'),
-(3, 'pull ups');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sets`
---
-
-CREATE TABLE `sets` (
-  `id` int(11) NOT NULL,
-  `exercise_id` int(11) NOT NULL,
-  `reps` int(11) NOT NULL,
-  `weight` int(11) UNSIGNED NOT NULL,
-  `workout_id` int(11) NOT NULL
-);
-
---
--- Dumping data for table `sets`
---
-
-INSERT INTO `sets` (`id`, `exercise_id`, `reps`, `weight`, `workout_id`) VALUES
-(7, 1, 123, 123, 2),
-(8, 1, 12, 123, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `workouts`
---
-
-CREATE TABLE `workouts` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
-) ;
-
---
--- Dumping data for table `workouts`
---
-
-INSERT INTO `workouts` (`id`, `name`) VALUES
-(1, 'Day 1'),
-(2, 'Day 2'),
-(4, 'day 3'),
-(5, 'day 4');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `exercises`
---
-ALTER TABLE `exercises`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sets`
---
-ALTER TABLE `sets`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `exercise_id` (`exercise_id`) USING BTREE,
-  ADD KEY `workout_id` (`workout_id`) USING BTREE;
-
---
--- Indexes for table `workouts`
---
-ALTER TABLE `workouts`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `exercises`
---
-ALTER TABLE `exercises`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `sets`
---
-ALTER TABLE `sets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT for table `workouts`
---
-ALTER TABLE `workouts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `sets`
---
-ALTER TABLE `sets`
-  ADD CONSTRAINT `exercise_id` FOREIGN KEY (`exercise_id`) REFERENCES `exercises` (`id`),
-  ADD CONSTRAINT `workout_key` FOREIGN KEY (`workout_id`) REFERENCES `workouts` (`id`);
+    }
