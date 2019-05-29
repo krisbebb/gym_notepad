@@ -42,15 +42,22 @@ $cakeDescription = 'Gym Notepad';
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                 <!-- <h1><a href="">
+                  <?= $this->fetch('title') ?>
+                </a></h1>  -->
+                <h1><?= $this->Html->link(
+                  'Gym Notepad',
+                  '/pages/index'
+
+              ); ?></h1>
             </li>
         </ul>
-        <div class="top-bar-section">
+        <!-- <div class="top-bar-section">
             <ul class="right">
                 <li><a target="_blank" href="https://cdu.edu.au">Kris LOGO</a></li>
                 <li><a target="_blank" href="https://cdu.edu.au">CDU</a></li>
             </ul>
-        </div>
+        </div> -->
     </nav>
 
 

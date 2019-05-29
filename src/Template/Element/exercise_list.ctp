@@ -7,6 +7,10 @@
 
 <div class="exercises index large-9 medium-8 columns content">
     <h3><?= __('Exercises') ?></h3>
+    <ul class="side-nav">
+      <li>  <?= $this->Html->link(__('New Exercise'), ['controller'=>"Exercises",'action' => 'add']) ?></li>
+    </ul>
+
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
