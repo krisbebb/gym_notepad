@@ -36,6 +36,10 @@ class ExercisesController extends AppController
         $exercise = $this->Exercises->get($id, [
             'contain' => ['Sets']
         ]);
+        $this->loadModel('Workouts');
+        $workouts = $this->Workouts->find('all');
+        $this->set('workout', $workouts);
+
 
         $this->set('exercise', $exercise);
     }

@@ -46,11 +46,17 @@ class WorkoutsController extends AppController
      */
     public function view($id = null)
     {
+
+      // $this->loadModel('Sets');
+      // $sets = $this->Sets->find('all');
+      // $this->set('sets', $sets);
         $workout = $this->Workouts->get($id, [
             'contain' => ['Sets']
         ]);
 
         $this->set('workout', $workout);
+
+
     }
 
     /**

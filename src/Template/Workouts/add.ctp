@@ -4,14 +4,14 @@
  * @var \App\Model\Entity\Workout $workout
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!-- <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Workouts'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Sets'), ['controller' => 'Sets', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Set'), ['controller' => 'Sets', 'action' => 'add']) ?></li>
     </ul>
-</nav>
+</nav> -->
 <div class="workouts form large-9 medium-8 columns content">
     <?= $this->Form->create($workout) ?>
     <fieldset>
@@ -20,6 +20,9 @@
             echo $this->Form->control('name');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <div class="input-group-button">
+    <input type="submit" class="button" value="Submit">
+  </div>
+    <!-- <?= $this->Form->button(__('Submit')) ?> -->
     <?= $this->Form->end() ?>
 </div>

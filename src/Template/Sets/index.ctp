@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Set[]|\Cake\Collection\CollectionInterface $sets
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!-- <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Set'), ['action' => 'add']) ?></li>
@@ -13,8 +13,10 @@
         <li><?= $this->Html->link(__('List Workouts'), ['controller' => 'Workouts', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Workout'), ['controller' => 'Workouts', 'action' => 'add']) ?></li>
     </ul>
-</nav>
-<div class="sets index large-9 medium-8 columns content">
+</nav> -->
+
+  <?= $this->element('set_list'); ?>
+<!-- <div class="sets index large-9 medium-8 columns content">
     <h3><?= __('Sets') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
@@ -56,4 +58,4 @@
         </ul>
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
     </div>
-</div>
+</div> -->

@@ -7,10 +7,14 @@
 
 <div class="exercises index large-9 medium-8 columns content">
     <h3><?= __('Exercises') ?></h3>
+    <ul class="side-nav">
+      <li>  <?= $this->Html->link(__('New Exercise'), ['controller'=>"Exercises",'action' => 'add']) ?></li>
+    </ul>
+
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!-- <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -18,7 +22,7 @@
         <tbody>
             <?php foreach ($exercises as $exercise): ?>
             <tr>
-                <td><?= $this->Number->format($exercise->id) ?></td>
+                <!-- <td><?= $this->Number->format($exercise->id) ?></td> -->
                 <td><?= h($exercise->name) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Exercises','action' => 'view', $exercise->id]) ?>
