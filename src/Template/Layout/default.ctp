@@ -51,6 +51,7 @@ $cakeDescription = 'Gym Notepad';
   <!-- Compressed CSS -->
 
 <!-- <link rel="stylesheet" href="css/foundation.css" /> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
 
@@ -121,10 +122,11 @@ $cakeDescription = 'Gym Notepad';
               ); ?></li>
             </ul>
           </li>
-
-          <li><?= $this->Html->link(
-          'Home',
-          '/home/index'
+          
+          <?php $home = "<i class='fas fa-home'></i>" ?>
+          <li><?= $this->Html->link($home
+          ,
+          '/home/index', ['escape'=>false]
         ); ?></li>
         </ul>
       </div>
