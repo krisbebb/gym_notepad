@@ -40,10 +40,12 @@ class SetsTable extends Table
         $this->belongsTo('Exercises', [
             'foreignKey' => 'exercise_id',
             'joinType' => 'INNER'
+
         ]);
         $this->belongsTo('Workouts', [
             'foreignKey' => 'workout_id',
             'joinType' => 'INNER'
+
         ]);
     }
 
