@@ -5,12 +5,11 @@
  */
 ?>
 
-<div class="exercises index large-9 medium-8 columns content">
-    <h3><?= __('Exercises') ?></h3>
+<div class="workouts index large-9 medium-8 columns content">
+    <h3><?= __('Workouts') ?></h3>
     <ul class="side-nav">
-      <li>  <?= $this->Html->link(__('New Exercise'), ['controller'=>"Exercises",'action' => 'add']) ?></li>
+      <li><?= $this->Html->link(__('New Workout'), ['controller'=>'Workouts','action' => 'add']) ?></li>
     </ul>
-
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -20,14 +19,14 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($exercises as $exercise): ?>
+            <?php foreach ($workouts as $workout): ?>
             <tr>
-                <!-- <td><?= $this->Number->format($exercise->id) ?></td> -->
-                <td><?= h($exercise->name) ?></td>
+                <!-- <td><?= $this->Number->format($workout->id) ?></td> -->
+                <td><?= h($workout->name) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Exercises','action' => 'view', $exercise->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Exercises','action' => 'edit', $exercise->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Exercises','action' => 'delete', $exercise->id], ['confirm' => __('Are you sure you want to delete # {0}?', $exercise->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['controller'=>'Workouts','action' => 'view', $workout->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller'=>'Workouts','action' => 'edit', $workout->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller'=>'Workouts','action' => 'delete', $workout->id], ['confirm' => __('Are you sure you want to delete # {0}?', $workout->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

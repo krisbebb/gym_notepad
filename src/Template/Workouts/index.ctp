@@ -4,15 +4,17 @@
  * @var \App\Model\Entity\Workout[]|\Cake\Collection\CollectionInterface $workouts
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!-- <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Workout'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Sets'), ['controller' => 'Sets', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Set'), ['controller' => 'Sets', 'action' => 'add']) ?></li>
     </ul>
-</nav>
-<div class="workouts index large-9 medium-8 columns content">
+</nav> -->
+
+  <?= $this->element('workout_list'); ?>
+<!-- <div class="workouts index large-9 medium-8 columns content">
     <h3><?= __('Workouts') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
@@ -46,4 +48,4 @@
         </ul>
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
     </div>
-</div>
+</div> -->
