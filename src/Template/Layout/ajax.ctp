@@ -32,9 +32,10 @@ $cakeDescription = 'Gym Notepad';
     <?= $this->Html->script('vendor/what-input.js') ?>
     <?= $this->Html->script('vendor/foundation.min.js') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('style.css') ?>
-    <?= $this->Html->css('foundation.min.css') ?>
+  <?= $this->Html->css('foundation.css') ?>
+    <!-- <?= $this->Html->css('base.css') ?> -->
+    <!-- <?= $this->Html->css('style.css') ?> -->
+
 
 
 
@@ -52,15 +53,13 @@ $cakeDescription = 'Gym Notepad';
 </head>
 <body>
 
-    <script>
-      $(document).foundation();
- </script>
-    <nav class="top-bar expanded" data-topbar role="navigation">
+
+    <!-- <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                 <!-- <h1><a href="">
+                 <h1><a href="">
                   <?= $this->fetch('title') ?>
-                </a></h1>  -->
+                </a></h1>
                 <h1><?= $this->Html->link(
                   'Gym Notepad',
                   '/pages/index'
@@ -68,14 +67,44 @@ $cakeDescription = 'Gym Notepad';
               ); ?></h1>
             </li>
         </ul>
-        <!-- <div class="top-bar-section">
+        <div class="top-bar-section">
             <ul class="right">
                 <li><a target="_blank" href="https://cdu.edu.au">Kris LOGO</a></li>
                 <li><a target="_blank" href="https://cdu.edu.au">CDU</a></li>
             </ul>
-        </div> -->
-    </nav>
+        </div>
+    </nav> -->
+<div class="top-bar" id="sitename">
+  <h1><?= $this->Html->link(
+    'Gym Notepad',
+    '/pages/index'
 
+  ); ?></h1>
+    </div>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Options</li>
+          <li>
+            <a href="#">One</a>
+            <ul class="menu vertical">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </div>
+
+      <!-- <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+        </ul>
+      </div> -->
+    </div>
 
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
@@ -87,5 +116,8 @@ $cakeDescription = 'Gym Notepad';
     </div>
     <footer>
     </footer>
+    <script>
+         $(document).foundation();
+       </script>
 </body>
 </html>
