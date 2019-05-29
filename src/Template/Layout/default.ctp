@@ -16,7 +16,7 @@
 $cakeDescription = 'Gym Notepad';
 ?>
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,18 +27,34 @@ $cakeDescription = 'Gym Notepad';
     </title>
     <?= $this->Html->meta('icon') ?>
 
+
+    <?= $this->Html->script('vendor/jquery.js') ?>
+    <?= $this->Html->script('vendor/what-input.js') ?>
+    <?= $this->Html->script('vendor/foundation.min.js') ?>
+
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('style.css') ?>
+    <?= $this->Html->css('foundation.min.css') ?>
 
 
+
+  <?= $this->fetch('script') ?>
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" /> -->
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script> -->
+	<!-- <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script> -->
+  <!-- Compressed CSS -->
+
+<!-- <link rel="stylesheet" href="css/foundation.css" /> -->
 </head>
 <body>
+
+    <script>
+      $(document).foundation();
+ </script>
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
