@@ -28,7 +28,7 @@
             <tr>
                 <!-- <td><?= $this->Number->format($set->id) ?></td> -->
                   <td><?= h($set->date) ?></td>
-                <td><?= $set->has('exercise') ? $this->Html->link($set->exercise->name, ['controller' => 'Exercises', 'action' => 'view', $set->exercise->name]) : '' ?></td>
+                <td><?= $set->has('exercise') ? $this->Html->link($set->exercise->name, ['controller' => 'Exercises', 'action' => 'view', $set->exercise->id]) : '' ?></td>
                 <td><?= $this->Number->format($set->reps) ?></td>
                 <td><?= $this->Number->format($set->weight) ?></td>
                 <!-- <td><?= $set->has('workout') ? $this->Html->link($set->workout->name, ['controller' => 'Workouts', 'action' => 'view', $set->workout->id]) : '' ?></td> -->
