@@ -1,9 +1,24 @@
 .sitename{
     text-align: center;
     color: #C3232D;
+    background-color: #f8f8f8;
 }
 
 /* #sitename a:link {  } */
 .activities{
   color: #C3232D;
+  padding-top: 10px;
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+legend {
+  font-size: 1.1875rem;
+line-height: 1.4;
+margin-top: 0;
+margin-bottom: 0.5rem;
+  color: #C3232D;
+  padding-top: 10px;
 }
