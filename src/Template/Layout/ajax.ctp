@@ -80,7 +80,7 @@ $cakeDescription = 'Gym Notepad';
   <h1 class="sitename">
     <?= $this->Html->link(
     'Gym Notepad',
-    '/home/index', ['class' => 'sitename', 'target' => '_blank']
+    '/home/index', ['class' => 'sitename'
   ); ?>
 </h1>
     </div>
