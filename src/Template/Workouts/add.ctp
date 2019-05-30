@@ -14,7 +14,7 @@
 </nav> -->
 <div class="workouts form large-9 medium-8 columns content">
     <?= $this->Form->create($workout) ?>
-    <fieldset>
+    <fieldset class="activities">
         <legend><?= __('Add Workout') ?></legend>
         <?php
             echo $this->Form->control('name');

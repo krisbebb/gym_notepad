@@ -6,7 +6,7 @@
 ?>
 
 <div class="sets index large-9 medium-8 columns content">
-    <h3><?= __('Sets') ?></h3>
+    <h3 class="activities"><?= __('Sets') ?></h3>
     <ul class="side-nav">
       <li>  <?= $this->Html->link(__('New Set'), ['controller'=>"Sets",'action' => 'add']) ?></li>
     </ul>

@@ -22,7 +22,7 @@
 </nav>
 <div class="sets form large-9 medium-8 columns content">
     <?= $this->Form->create($set) ?>
-    <fieldset>
+    <fieldset class="activities">
         <legend><?= __('Edit Set') ?></legend>
         <?php
             echo $this->Form->control('exercise_id', ['options' => $exercises]);

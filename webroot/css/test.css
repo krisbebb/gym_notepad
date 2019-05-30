@@ -1,3 +1,9 @@
-#sitename {
+.sitename{
     text-align: center;
+    color: #C3232D;
+}
+
+/* #sitename a:link {  } */
+.activities{
+  color: #C3232D;
 }

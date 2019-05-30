@@ -76,11 +76,11 @@ $cakeDescription = 'Gym Notepad';
             </ul>
         </div>
     </nav> -->
-<div id="sitename">
-  <h1 >
+<div >
+  <h1 class="sitename">
     <?= $this->Html->link(
     'Gym Notepad',
-    '/home/index'
+    '/home/index', ['class' => 'sitename', 'target' => '_blank']
   ); ?>
 </h1>
     </div>
@@ -122,7 +122,7 @@ $cakeDescription = 'Gym Notepad';
               ); ?></li>
             </ul>
           </li>
-          
+
           <?php $home = "<i class='fas fa-home'></i>" ?>
           <li><?= $this->Html->link($home
           ,
