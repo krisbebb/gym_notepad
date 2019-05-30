@@ -35,6 +35,7 @@ $cakeDescription = 'Gym Notepad';
   <?= $this->Html->css('foundation.css') ?>
     <!-- <?= $this->Html->css('base.css') ?> -->
     <!-- <?= $this->Html->css('style.css') ?> -->
+    <?= $this->Html->css('test.css') ?>
 
 
 
@@ -50,6 +51,7 @@ $cakeDescription = 'Gym Notepad';
   <!-- Compressed CSS -->
 
 <!-- <link rel="stylesheet" href="css/foundation.css" /> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
 
@@ -74,27 +76,58 @@ $cakeDescription = 'Gym Notepad';
             </ul>
         </div>
     </nav> -->
-<div class="top-bar" id="sitename">
-  <h1><?= $this->Html->link(
+<div >
+  <h1 class="sitename">
+    <?= $this->Html->link(
     'Gym Notepad',
-    '/pages/index'
-
-  ); ?></h1>
+    '/home/index', ['class' => 'sitename', 'target' => '_blank']
+  ); ?>
+</h1>
     </div>
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Options</li>
-          <li>
-            <a href="#">One</a>
+          <li class="menu-text"><?= $this->fetch('title') ?></li>
+          <li class="is-dropdown-submenu-parent">
+            <a href="#">New</a>
             <ul class="menu vertical">
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
+              <li><?= $this->Html->link(
+                'Exercise',
+                '/Exercises/add'
+              ); ?></li>
+              <li><?= $this->Html->link(
+                'Workout',
+                '/Workouts/add'
+              ); ?></li>
+              <li><?= $this->Html->link(
+                'Set',
+                '/Sets/add'
+              ); ?></li>
             </ul>
           </li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
+          <li class="is-dropdown-submenu-parent">
+            <a href="#">List</a>
+            <ul class="menu vertical">
+              <li><?= $this->Html->link(
+                'Exercises',
+                '/Exercises/index'
+              ); ?></li>
+              <li><?= $this->Html->link(
+                'Workouts',
+                '/Workouts/index'
+              ); ?></li>
+              <li><?= $this->Html->link(
+                'Sets',
+                '/Sets/index'
+              ); ?></li>
+            </ul>
+          </li>
+
+          <?php $home = "<i class='fas fa-home'></i>" ?>
+          <li><?= $this->Html->link($home
+          ,
+          '/home/index', ['escape'=>false]
+        ); ?></li>
         </ul>
       </div>
 

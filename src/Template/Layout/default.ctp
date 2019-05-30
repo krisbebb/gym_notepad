@@ -88,7 +88,7 @@ $cakeDescription = 'Gym Notepad';
       <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
           <li class="menu-text"><?= $this->fetch('title') ?></li>
-          <li>
+          <li class="is-dropdown-submenu-parent">
             <a href="#">New</a>
             <ul class="menu vertical">
               <li><?= $this->Html->link(
@@ -105,7 +105,7 @@ $cakeDescription = 'Gym Notepad';
               ); ?></li>
             </ul>
           </li>
-          <li>
+          <li class="is-dropdown-submenu-parent">
             <a href="#">List</a>
             <ul class="menu vertical">
               <li><?= $this->Html->link(
